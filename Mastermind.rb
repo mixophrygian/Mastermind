@@ -95,7 +95,9 @@ def play(game_type, player_name)
 		generate_feedback(@current_guess, @secret_code)
 		@all_feedback << @current_feedback
 		@previous_feedback = @current_feedback
-		display_board
+		if player_name == "You"
+			display_board
+		end
 		check_for_win(@current_guess, player_name)
 		unless @won
 			@allowed_guesses -= 1
@@ -241,6 +243,7 @@ end
  |_|  |_/_/    \\_\\_____/   |_|  |______|_|  \\_\\_|  |_|_____|_| \\_|_____/ 
 
 "			elsif player_name == "The computer"
+				display_board
 				puts "\nThe computer cracked your code in only #{13-@allowed_guesses} guesses.  ¯\\_(ツ)_/¯"
 				end
  			@won = true
