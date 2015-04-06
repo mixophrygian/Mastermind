@@ -65,7 +65,7 @@ def break_code
  | (__/ _ \\/ _` / -_) | _ \\ '_/ -_) _` | / / -_) '_|
   \\___\\___/\\__,_\\___| |___/_| \\___\\__,_|_\\_\\___|_|  
                                                     
-Choose four pegs of any colors. \
+Try to guess the computer's secret code!  Choose four pegs of any colors. \
 Duplicates are permitted.  Colors: Black, White, Red, Yellow, Blue, or Green.  Enter them separated by a \
 single space, like this: \"red white blue blue\" \n"
 		@secret_code = generate_secret_code
@@ -81,7 +81,7 @@ def make_code
   \\___\\___/\\__,_\\___| |_|  |_\\__,_|_\\_\\___|_|  
                                                				"
   puts "Create a secret code made up of a sequence of four pegs from any six colors: Black, White, Red, \
-  Yellow, Blue, or Green.  Enter them separated by a single space, like this \"green white white red\". Duplicates are permitted. \n\n"
+Yellow, Blue, or Green.  Enter them separated by a single space, like this \"green white white red\". Duplicates are permitted. See every guess the computer takes towards breaking your code! \n\n"
 
   @secret_code = request_user_code
 
@@ -231,7 +231,7 @@ end
 	def check_for_win(guess, player_name)
 		if guess == @secret_code 
 			if player_name == "You"
-				puts "YOU BROKE THE CODE!  In only #{13-@allowed_guesses} guesses. YOU ARE A...
+				puts "\nYOU BROKE THE CODE!  In only #{13-@allowed_guesses} guesses. YOU ARE A...
 
   __  __           _____ _______ ______ _____  __  __ _____ _   _ _____  
  |  \\/  |   /\\    / ____|__   __|  ____|  __ \\|  \\/  |_   _| \\ | |  __ \\ 
