@@ -118,6 +118,10 @@ end
 		
 def request_user_code
 	  code = gets.chomp.downcase.split(' ')
+	  until code.length > 1
+	  	puts "Enter four colors separated by spaces."
+	  	code = gets.chomp.downcase.split(' ')
+	  end
   while !check_for_valid(code)
   	puts "\nAt least one of your code elements was invalide, please enter them again separated by a single space like this \"green black white red\".  \n"
   	code = gets.chomp.downcase.split(' ')
